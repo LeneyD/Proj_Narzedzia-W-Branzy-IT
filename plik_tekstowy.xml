@@ -1,0 +1,15 @@
+<rozklad>
+    <miejscowosc>Warszawa</miejscowosc> 
+    <linie>
+        <linia>
+            <numer>3</numer>
+            <poczatek>Tarchomin</poczatek>
+            <koniec>Kabaty</koniec>
+        </linia>
+        <linia>
+            <numer>201</numer>
+            <poczatek>Lotnisko Bemowo</poczatek>
+            <koniec>Kabaty</koniec>
+        </linia>
+    </linie>
+</rozklad>
