@@ -1,0 +1,19 @@
+{
+    "rozklad": {
+        "linie": {
+            "linia": [
+                {
+                    "koniec": "Służewiec",
+                    "numer": "3",
+                    "poczatek": "Tarchomin"
+                },
+                {
+                    "koniec": "Kabaty",
+                    "numer": "201",
+                    "poczatek": "Lotnisko Bemowo"
+                }
+            ]
+        },
+        "miejscowosc": "Warszawa"
+    }
+}
