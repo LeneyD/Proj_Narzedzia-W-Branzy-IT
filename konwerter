@@ -1,24 +1,28 @@
 import argparse
+import json
 
-parser = argparse.ArgumentParser(
-  description='Konwersja plków XML, JSON i YAML.')
+def convert_files(input_file, output_file, file_format):
+    pass
 
-parser.add_argument('input_file', type=str,
-                    help='Nazwa pliku wejściowego.')
-parser.add_argument('output_file', type=str,
-                    help='Nazwa pliku wyjściowego.')
+parser = argparse.ArgumentParser(description='Konwersja plków XML, JSON i YAML.')
+
+parser.add_argument('input_file', type=str, help='Nazwa pliku wejściowego.')
+parser.add_argument('output_file', type=str, help='Nazwa pliku wyjściowego.')
 parser.add_argument('format', type=str, help='Format pliku')
 
 args = parser.parse_args()
 
 input_file = args.input_file
 output_file = args.output_file
- file_format = args.format.lower()
+file_format = args.format.lower()
+
+if file_format == 'json':
+    with open(input_file, 'r') as file:
+        try:
+            data = json.load(file)
+        except json.JSONDecodeError as e:
+            print('Niepoprawny format pliku.', str(e))
+            exit(1)
 
 convert_files(input_file, output_file, file_format)
 
-
-# Wczytywanie
-input_file = input('Podaj nazwę pliku wejściowego: ')
-
-convert_files(input_file, output_file, file_format)
