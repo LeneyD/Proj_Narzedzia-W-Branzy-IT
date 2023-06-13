@@ -1,18 +1,17 @@
 import argparse
+import json
 
-parser = argparse.ArgumentParser(
-  description='Konwersja plków XML, JSON i YAML.')
+def convert_files(input_file, output_file, file_format):
+    pass
 
-parser.add_argument('input_file', type=str,
-                    help='Nazwa pliku wejściowego.')
-parser.add_argument('output_file', type=str,
-                    help='Nazwa pliku wyjściowego.')
+parser = argparse.ArgumentParser(description='Konwersja plków XML, JSON i YAML.')
+
+parser.add_argument('input_file', type=str, help='Nazwa pliku wejściowego.')
+parser.add_argument('output_file', type=str, help='Nazwa pliku wyjściowego.')
 parser.add_argument('format', type=str, help='Format pliku')
 
 args = parser.parse_args()
 
 input_file = args.input_file
 output_file = args.output_file
- file_format = args.format.lower()
-
-convert_files(input_file, output_file, file_format)
+file_format = args.format.lower()
