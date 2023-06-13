@@ -16,3 +16,9 @@ output_file = args.output_file
  file_format = args.format.lower()
 
 convert_files(input_file, output_file, file_format)
+
+
+# Wczytywanie
+input_file = input('Podaj nazwę pliku wejściowego: ')
+
+convert_files(input_file, output_file, file_format)
